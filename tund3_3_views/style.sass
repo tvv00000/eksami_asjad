@@ -1,0 +1,93 @@
+// VARIABLES
+
+$header-color: #d2c1e3
+$even-color: #d0e3c1
+$odd-color: #c1dde3
+
+$tablet: 900px
+$mobile: 600px
+
+// MIXIN
+
+=box-style($area, $bg)
+
+    grid-area: $area
+    background-color: $bg
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    border: 1px solid #bdbdbd
+    min-height: 120px
+
+// RESET
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// BODY
+
+body
+    padding: 1rem
+    font-family: Arial, sans-serif
+
+// GRID LAYOUT
+
+.container
+
+    display: grid
+
+    grid-template-columns: repeat(4, 1fr)
+
+    grid-template-areas: "header header header header" "one two three four"
+
+// HEADER
+
+.header
+
+    grid-area: header
+    background-color: $header-color
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    min-height: 90px
+    border: 1px solid #bdbdbd
+
+// BOXES
+
+.box1
+    +box-style(one, $odd-color)
+
+.box2
+    +box-style(two, $even-color)
+
+.box3
+    +box-style(three, $odd-color)
+
+.box4
+    +box-style(four, $even-color)
+
+// TABLET VIEW
+
+@media (max-width: $tablet)
+
+    .container
+
+        grid-template-columns: repeat(2, 1fr)
+
+        grid-template-areas: "header header" "one three" "two four"
+
+// MOBILE VIEW
+
+@media (max-width: $mobile)
+
+    .container
+
+        grid-template-columns: 1fr
+
+        grid-template-areas: "header" "one" "two" "three" "four"
