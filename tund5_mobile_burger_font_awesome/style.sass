@@ -1,0 +1,194 @@
+// =====================
+// VARIABLES
+// =====================
+
+$primary: #264653
+$secondary: #2a9d8f
+$accent: #e9c46a
+$light: #f4f4f4
+$dark: #1f1f1f
+
+$mobile: 768px
+
+// =====================
+// MIXINS
+// =====================
+
+=card-style
+
+    border: 2px solid $secondary
+    border-radius: 1rem
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15)
+
+// =====================
+// RESET
+// =====================
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+body
+    font-family: 'Montserrat', sans-serif
+    background-color: $light
+    color: $dark
+
+// =====================
+// HEADER
+// =====================
+
+header
+
+    background-color: $primary
+    color: white
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    padding: 1rem 2rem
+
+    position: sticky
+    top: 0
+
+.logo
+
+    display: flex
+    align-items: center
+    gap: 0.5rem
+
+    font-size: 1.5rem
+    font-weight: 700
+
+nav
+
+    display: flex
+    gap: 1rem
+
+    a
+
+        color: white
+        text-decoration: none
+
+        padding: 0.5rem 1rem
+        border-radius: 0.5rem
+
+        transition: 0.3s
+
+        &:hover
+
+            background-color: $accent
+            color: $dark
+
+.mobile-menu
+
+    display: none
+    font-size: 1.8rem
+
+// =====================
+// MAIN
+// =====================
+
+main
+
+    padding: 2rem
+
+.wrapper
+
+    margin: auto
+
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    gap: 2rem
+
+.section
+
+    +card-style
+
+    background-color: white
+
+    width: 100%
+    max-width: 750px
+
+    padding: 2rem
+
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h1, h2
+
+        margin-bottom: 1rem
+        color: $primary
+
+    p
+
+        max-width: 75ch
+        margin-bottom: 1rem
+        text-align: center
+        line-height: 1.7
+
+// =====================
+// BACK TO TOP
+// =====================
+
+.back-top
+
+    margin-top: 1rem
+
+    display: inline-flex
+    align-items: center
+    gap: 0.5rem
+
+    background-color: $secondary
+    color: white
+
+    padding: 0.8rem 1.2rem
+
+    text-decoration: none
+    border-radius: 0.5rem
+
+    transition: 0.3s
+
+    &:hover
+
+        background-color: $primary
+
+// =====================
+// MOBILE VIEW
+// =====================
+@media (max-width: $mobile)
+
+    nav
+
+        display: none
+        flex-direction: column
+
+        position: absolute
+        top: 80px
+        right: 20px
+
+        background-color: $primary
+
+        padding: 1rem
+
+        border-radius: 1rem
+
+        width: 200px
+
+        a
+            padding: 0.8rem
+
+    nav.active
+        display: flex
+
+    .mobile-menu
+        display: block
+        cursor: pointer
+
