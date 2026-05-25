@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeriileht</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrapper">
+    <h1>Loodus ja inspiratsioon</h1>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrapper">
+
+      <img
+        src="images/hero-small.jpg"
+        srcset="
+          images/hero-small.jpg 600w,
+          images/hero-medium.jpg 1200w,
+          images/hero-large.jpg 2000w
+        "
+        sizes="100vw"
+        alt="HERO PILT"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+    </div>
+  </section>
+
+  <!-- SISU -->
+  <section class="content">
+    <div class="wrapper">
+
+      <h2>Avasta loodus</h2>
+
+      <p>
+        See leht tutvustab kauneid loodusvaateid ja videoid maailmast.
+      </p>
+
+      <!-- VIDEO -->
+      <figure class="video-box">
+        <video controls poster="images/img2.jpg" preload="none">
+          <source src="video/nature.mp4" type="video/mp4">
+          Sinu brauser ei toeta videot.
+        </video>
+        <figcaption>Rahustav loodusvideo</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- GALERII -->
+  <section class="gallery">
+    <div class="wrapper">
+
+      <h2>Pildigalerii</h2>
+
+      <div class="grid">
+
+        <!-- WebP + fallback -->
+        <figure>
+            <picture>
+                <source srcset="images/img1.webp" type="image/webp">
+                <img src="images/img1.jpg" alt="loodus" loading="lazy">
+            </picture>
+        </figure>
+
+        <figure>
+          <picture>
+            <source srcset="images/img2.webp" type="image/webp">
+            <img src="images/img2.jpg" alt="loodus" loading="lazy">
+          </picture>
+        </figure>
+
+        <figure>
+          <picture>
+            <source srcset="images/img3.webp" type="image/webp">
+            <img src="images/img3.jpg" alt="loodus" loading="lazy">
+          </picture>
+        </figure>
+
+        <figure>
+          <picture>
+            <source srcset="images/img4.webp" type="image/webp">
+            <img src="images/img4.jpg" alt="loodus" loading="lazy">
+          </picture>
+        </figure>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrapper">
+    <p>© 2026 Loodusleht</p>
+  </div>
+</footer>
+
+</body>
+</html>
