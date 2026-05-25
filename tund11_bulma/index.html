@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meist</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar is-primary">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">Meist</a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item">Meist</a>
+        <a class="navbar-item">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="section">
+
+  <!-- ABOUT -->
+  <section class="container">
+    <h1 class="title">Meist</h1>
+    <p class="content">
+      Quisque faucibus ex sapien... (sinu tekst siia)
+    </p>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="container mt-6">
+
+    <div class="columns">
+
+      <!-- Kontakt -->
+      <div class="column">
+        <div class="box">
+          <h2 class="title is-5">Kontaktid</h2>
+
+          <p><strong>Aadress:</strong> Uus-Sadama 5</p>
+          <p><strong>Telefon:</strong> +372 640 9101</p>
+          <p><strong>Email:</strong> tlu@tlu.ee</p>
+
+          <button class="button is-link is-small mt-3">Facebook</button>
+          <button class="button is-link is-small mt-3">LinkedIn</button>
+        </div>
+      </div>
+
+      <!-- kaart -->
+      <div class="column">
+        <div class="box">
+          <p><strong>Asukoht</strong></p>
+          <figure class="image is-4by3">
+            <iframe src="https://www.google.com/maps/embed?..." style="border:0;"></iframe>
+          </figure>
+        </div>
+      </div>
+
+      <!-- statistika -->
+      <div class="column">
+        <div class="box">
+          <h2 class="title is-5">Statistika</h2>
+
+          <p>Kandideerijad</p>
+          <progress class="progress is-info" value="60" max="100"></progress>
+
+          <p>Lõpetajad</p>
+          <progress class="progress is-success" value="75" max="100"></progress>
+
+          <p>Tööle saanud</p>
+          <progress class="progress is-primary" value="85" max="100"></progress>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="container mt-6">
+
+    <h2 class="title">Kontakteeru</h2>
+
+    <form class="box">
+
+      <div class="field">
+        <label class="label">Nimi</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Ees- ja perekonnanimi">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">E-mail</label>
+        <div class="control">
+          <input class="input" type="email" placeholder="E-mail">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Sõnum</label>
+        <div class="control">
+          <textarea class="textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <button class="button is-primary">Saada</button>
+      </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+</body>
+</html>
