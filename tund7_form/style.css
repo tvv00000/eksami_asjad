@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #2f2f2f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.form-section {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input, .form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #2f2f2f;
+  box-shadow: 0 0 4px rgba(47, 47, 47, 0.3);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+.checkbox label {
+  font-weight: normal;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  background-color: #2f2f2f;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button:hover {
+  background-color: #444;
+}
+
+.hidden {
+  display: none;
+}
+
+#thankYouMessage {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}/*# sourceMappingURL=style.css.map */
