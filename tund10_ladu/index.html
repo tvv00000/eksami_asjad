@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tooted</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav aria-label="Peamenüü">
+    <ul class="nav">
+      <li><a href="#">Tooted</a></li>
+      <li><a href="#">Lisa Toode</a></li>
+      <li><a href="#">Logi välja</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- ===================== TABLE ===================== -->
+  <section aria-labelledby="product-title" class="table-section">
+
+    <h1 id="product-title">Tooted</h1>
+
+    <div class="table-wrapper">
+      <table aria-describedby="product-desc">
+        <caption id="product-desc">Toodete nimekiri</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Toode</th>
+            <th scope="col">Hind</th>
+            <th scope="col">Kogus</th>
+            <th scope="col">Kategooria</th>
+          </tr>
+        </thead>
+
+        <tbody id="productTableBody">
+          <!-- JS adds rows here -->
+        </tbody>
+
+      </table>
+    </div>
+
+  </section>
+
+  <!-- ===================== FORM ===================== -->
+  <section aria-labelledby="form-title" class="form-section">
+
+    <h2 id="form-title">Lisa toode</h2>
+
+    <form id="productForm">
+
+      <label for="name">Toode *</label>
+      <input type="text" id="name" required>
+
+      <label for="price">Hind *</label>
+      <input type="number" id="price" required>
+
+      <label for="qty">Kogus *</label>
+      <input type="number" id="qty" required>
+
+      <label for="category">Kategooria *</label>
+      <input type="text" id="category" required>
+
+      <button type="submit">Lisa Toode</button>
+
+    </form>
+
+    <p id="message" class="hidden" role="status" aria-live="polite">
+      Toode lisatud!
+    </p>
+
+  </section>
+
+</main>
+
+<!-- ===================== TEMPLATE ===================== -->
+<template id="rowTemplate">
+  <tr>
+    <td class="t-name"></td>
+    <td class="t-price"></td>
+    <td class="t-qty"></td>
+    <td class="t-category"></td>
+  </tr>
+</template>
+
+<script src="script.js"></script>
+
+</body>
+</html>
